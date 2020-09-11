@@ -1,0 +1,25 @@
+{
+  "name": "syntec",
+  "version": "1.0.0",
+  "description": "Test project for Syntec",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open"
+  },
+  "author": "Jake Chen",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "babel-loader": "^8.1.0",
+    "html-webpack-plugin": "^4.4.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0"
+  }
+}
