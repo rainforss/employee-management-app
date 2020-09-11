@@ -141,7 +141,7 @@ elements.submitForm.addEventListener("click", (e) => {
 
 elements.formBody.addEventListener("keyup", (e) => {
   const nodeName = e.target.nodeName;
-  const inputProps = event.target;
+  const inputProps = e.target;
   if (nodeName === "INPUT") {
     formController(true, false, inputProps);
   }
