@@ -158,9 +158,12 @@ according to user specifications by adding extra event listeners and etc, the us
 2. Drag and drop are not particularly useful or applicable in this app since we are mainly getting data from the server. Dragging to reorder items are not essential if
 we are just performing the reordering in client side. In my opinion, sorting in the UI can be done in a more elegant way without the help of dragon and drop.
 
-3. I implemented pagination instead of 'load more' function in this demo. I am assuming that pagination is more helpful in a common API which can return the total number
- of entries, especially when there are a lot of entries. Draging down to load more can be implemented using webapis such as offset and heights to send another 
- get request right before user scrolls to the end of current list container. It does have the advantage of getting rid of annoying button clicks for mobile users, but it
- brings down the efficiency on PCs since PC screens can diplay a lot more entries at once and scroll to load approach can be tedious in this situation. Anyways, different
- approaches can be used on different devices, following customer's requirements.
+3. I implemented pagination instead of 'load more' function in this demo. I will come back to replace the pagination with 'load more' if required, but I am providing the
+steps here for your info: make another API call with the same pageSize and incremented pageNumber while rendering the loader, remove the loader as well as load button and
+ render the new data when new data is received. If the new data array size is less than the pageSize, render the load button as 'no more entries' and disable the button.  
+ 
+ I am assuming that pagination is more helpful in a common API which can return the total number of entries, especially when there are a lot of entries. Draging down to load 
+ more can be implemented using webapis such as offset and heights to send another get request right before user scrolls to the end of current list container. It does have the 
+ advantage of getting rid of annoying button clicks for mobile users, but it brings down the efficiency on PCs since PC screens can diplay a lot more entries at once and scroll 
+ to load approach can be tedious in this situation. Anyways, different approaches can be used on different devices, following customer's requirements.
  */
